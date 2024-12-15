@@ -1,0 +1,11 @@
+services:
+  apache:
+      container_name: apache-file-server
+      #build: .
+      image: httpd
+      restart: always
+      ports:
+        - 8080:80
+      volumes:
+        - /mnt/cerebro:/usr/local/apache2/htdocs
+      
